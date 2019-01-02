@@ -1,0 +1,21 @@
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\bin\Debug\分布式光纤系统-警报信息展示工具 V1.0.exe.config
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\bin\Debug\分布式光纤系统-警报信息展示工具 V1.0.exe.manifest
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\bin\Debug\分布式光纤系统-警报信息展示工具 V1.0.application
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\bin\Debug\分布式光纤系统-警报信息展示工具 V1.0.exe
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\bin\Debug\分布式光纤系统-警报信息展示工具 V1.0.pdb
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\bin\Debug\MQTTnet.dll
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\bin\Debug\MQTTnet.Extensions.ManagedClient.dll
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\bin\Debug\Newtonsoft.Json.dll
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\bin\Debug\Newtonsoft.Json.pdb
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\bin\Debug\Newtonsoft.Json.xml
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.csprojAssemblyReference.cache
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.MQTTMessageDisplay.resources
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.Properties.Resources.resources
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.csproj.GenerateResource.cache
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.csproj.CoreCompileInputs.cache
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\obj\Debug\分布式光纤系统-警报信息展示工具 V1.0.TrustInfo.xml
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\obj\Debug\分布式光纤系统-警报信息展示工具 V1.0.exe.manifest
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\obj\Debug\分布式光纤系统-警报信息展示工具 V1.0.application
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.csproj.CopyComplete
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\obj\Debug\分布式光纤系统-警报信息展示工具 V1.0.exe
+F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\obj\Debug\分布式光纤系统-警报信息展示工具 V1.0.pdb

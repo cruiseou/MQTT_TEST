@@ -1,0 +1,65 @@
+{
+  "local": {
+    "hostname": "192.168.1.150",
+    "alarms": "DFVS/Alarms",
+    "fault": "fault",
+    "binarization": "binarization"
+  },
+  "isEnableRemote": true,
+  "remote": {
+    "hostname": "192.168.1.150",
+    "connectionstatus": "Heartbeat",
+    "threshold": "device/{clientId}/Threshold",
+    "relay": "device/{clientId}/RelayStatus",
+    "dFVSAlarms": "DFVS/Alarms/Converted"
+  },
+  "api": {
+    "Sensor": { "name": "TW-LS-002" },
+    "uri": {
+      "baseuri": "http://192.168.2.200:80/",
+      "sensor": "api/v1.0/device/{name}",
+      "threshold": "api/v1.0/device/Threshold",
+      "relayStatus": "api/v1.0/device/relayStatus",
+      "addDFVSAlarms": "api/v1.0/Alarm/Add",
+      "isAlarm": "api/v1.0/device/IsAlarm",
+      "isBroken": "api/v1.0/device/IsBroken"
+    }
+  },
+  "isEnableRelay": false,
+  "Relays": {
+    "alarm": [
+      {
+        "begin": 1,
+        "end": 2000,
+        "relays": [ 1, 2 ],
+        "minLevel": 1
+      },
+      {
+        "begin": 1000,
+        "end": 2000,
+        "relays": [ 1, 2 ],
+        "minLevel": 2
+      },
+      {
+        "begin": 1,
+        "end": 2000,
+        "relays": [ 4, 5, 6 ],
+        "minLevel": 3
+      },
+      {
+        "begin": 2,
+        "end": 2000,
+        "relays": [ 1, 2, 3 ],
+        "minLevel": 1
+      }
+    ],
+    "broken": [ 1, 2 ]
+  },
+
+  "language": {
+    "alarmTopic": "發生警報",
+    "alarms": "發生{alarmType}警報，位於：{location}，等級：{level} 置信率：{possibility}，事件寬度：{width}，最大強度：{maxIntensity}",
+    "brokenTopic": "發生斷纖故障",
+    "broken": "斷纖故障，位於：{location}米"
+  }
+}
