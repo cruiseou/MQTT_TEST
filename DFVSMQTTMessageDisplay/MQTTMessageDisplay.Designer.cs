@@ -52,6 +52,7 @@
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_MQTTStar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -65,7 +66,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 40);
+            this.label2.Size = new System.Drawing.Size(100, 40);
             this.label2.TabIndex = 4;
             this.label2.Text = "IP地址：";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -73,7 +74,7 @@
             // txt_IP
             // 
             this.txt_IP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_IP.Location = new System.Drawing.Point(235, 9);
+            this.txt_IP.Location = new System.Drawing.Point(140, 9);
             this.txt_IP.Name = "txt_IP";
             this.txt_IP.Size = new System.Drawing.Size(100, 21);
             this.txt_IP.TabIndex = 6;
@@ -82,12 +83,13 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.62556F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.89132F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.81644F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.24881F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.41788F));
+            this.tableLayoutPanel1.ColumnCount = 6;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.417783F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.26205F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.91555F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.49487F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.75848F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.96843F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txt_IP, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btn_Broken, 2, 0);
@@ -95,6 +97,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btn_Clear, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btn_MQTTStar, 5, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -108,9 +111,9 @@
             // btn_Broken
             // 
             this.btn_Broken.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Broken.Location = new System.Drawing.Point(414, 3);
+            this.btn_Broken.Location = new System.Drawing.Point(277, 3);
             this.btn_Broken.Name = "btn_Broken";
-            this.btn_Broken.Size = new System.Drawing.Size(333, 34);
+            this.btn_Broken.Size = new System.Drawing.Size(259, 34);
             this.btn_Broken.TabIndex = 7;
             this.btn_Broken.Text = "监听断纤警报";
             this.btn_Broken.UseVisualStyleBackColor = true;
@@ -119,9 +122,9 @@
             // btn_Alarm
             // 
             this.btn_Alarm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Alarm.Location = new System.Drawing.Point(753, 3);
+            this.btn_Alarm.Location = new System.Drawing.Point(542, 3);
             this.btn_Alarm.Name = "btn_Alarm";
-            this.btn_Alarm.Size = new System.Drawing.Size(275, 34);
+            this.btn_Alarm.Size = new System.Drawing.Size(241, 34);
             this.btn_Alarm.TabIndex = 8;
             this.btn_Alarm.Text = "监听警报 ";
             this.btn_Alarm.UseVisualStyleBackColor = true;
@@ -130,9 +133,9 @@
             // btn_Clear
             // 
             this.btn_Clear.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Clear.Location = new System.Drawing.Point(1034, 3);
+            this.btn_Clear.Location = new System.Drawing.Point(789, 3);
             this.btn_Clear.Name = "btn_Clear";
-            this.btn_Clear.Size = new System.Drawing.Size(230, 34);
+            this.btn_Clear.Size = new System.Drawing.Size(219, 34);
             this.btn_Clear.TabIndex = 9;
             this.btn_Clear.Text = "清空警报信息";
             this.btn_Clear.UseVisualStyleBackColor = true;
@@ -140,7 +143,7 @@
             // 
             // groupBox1
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.groupBox1, 5);
+            this.tableLayoutPanel1.SetColumnSpan(this.groupBox1, 6);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 43);
@@ -196,7 +199,7 @@
             // groupBox2
             // 
             this.groupBox2.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.groupBox2, 5);
+            this.tableLayoutPanel1.SetColumnSpan(this.groupBox2, 6);
             this.groupBox2.Controls.Add(this.dataGridView2);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(3, 252);
@@ -291,6 +294,17 @@
             this.Column16.HeaderText = " 最大强度";
             this.Column16.Name = "Column16";
             // 
+            // btn_MQTTStar
+            // 
+            this.btn_MQTTStar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_MQTTStar.Location = new System.Drawing.Point(1014, 3);
+            this.btn_MQTTStar.Name = "btn_MQTTStar";
+            this.btn_MQTTStar.Size = new System.Drawing.Size(250, 34);
+            this.btn_MQTTStar.TabIndex = 12;
+            this.btn_MQTTStar.Text = "启动MQTT监听";
+            this.btn_MQTTStar.UseVisualStyleBackColor = true;
+            this.btn_MQTTStar.Click += new System.EventHandler(this.btn_MQTTStar_Click);
+            // 
             // MQTTMessageDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -335,6 +349,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.Button btn_MQTTStar;
     }
 }
 
