@@ -33,6 +33,10 @@ namespace DFVSMQTTMessageDisplay
         /// </summary>
         private IManagedMqttClient mqttClient;
 
+        private ManagedMqttClientOptionsBuilder managedMqttClientOptionsBuilder;
+
+        private MqttClientOptionsBuilder mqrrOptionsBuilder;
+
         /// <summary>
         /// 
         /// </summary>
@@ -63,17 +67,43 @@ namespace DFVSMQTTMessageDisplay
             mqttClient.SynchronizingSubscriptionsFailed += MqttClient_SynchronizingSubscriptionsFailed;
             //数据接收事件
             mqttClient.ApplicationMessageReceived += MqttClient_ApplicationMessageReceived;
+           
+        }
+        /// <summary>
+        /// 启动mqtt监听
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_MQTTStar_Click(object sender, EventArgs e)
+        {
+            if (mqttClient.IsStarted)
+            {
+                mqttClient.StopAsync();
+                btn_MQTTStar.Invoke(new MethodInvoker(delegate
+                {
+                    btn_MQTTStar.Text = "启动MQTT监听";
+                }));
 
-            mqttClient.StartAsync(new ManagedMqttClientOptionsBuilder()
-                .WithAutoReconnectDelay(TimeSpan.FromSeconds(10))
-                .WithClientOptions(new MqttClientOptionsBuilder()
-                    .WithClientId(clientID)
-                    .WithCleanSession(true)
-                    .WithTcpServer(txt_IP.Text.Trim(), 1883)
-                    .Build())
-                .Build());
+               
+            }
+            else
+            {
+                mqrrOptionsBuilder = new MqttClientOptionsBuilder();
+                mqrrOptionsBuilder.WithClientId(clientID);
+                mqrrOptionsBuilder.WithCleanSession(true);
+                mqrrOptionsBuilder.WithTcpServer(txt_IP.Text.Trim(), 1883);
+                managedMqttClientOptionsBuilder = new ManagedMqttClientOptionsBuilder();
+                managedMqttClientOptionsBuilder.WithAutoReconnectDelay(TimeSpan.FromSeconds(10));
+             
+                managedMqttClientOptionsBuilder.WithClientOptions(mqrrOptionsBuilder);
+                mqttClient.StartAsync(managedMqttClientOptionsBuilder.Build());
+                btn_MQTTStar.Invoke(new MethodInvoker(delegate
+                {
+                    btn_MQTTStar.Text = "停止MQTT监听";
+                }));
 
-            //  mqttClient.SubscribeAsync(this.txt_alarms.Text.Trim());
+               
+            }
 
 
         }
@@ -248,14 +278,6 @@ namespace DFVSMQTTMessageDisplay
 
         }
 
-        /// <summary>
-        /// 启动mqtt监听
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btn_MQTTStar_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

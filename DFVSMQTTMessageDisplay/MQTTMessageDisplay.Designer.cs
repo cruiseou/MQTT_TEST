@@ -78,7 +78,7 @@
             this.txt_IP.Name = "txt_IP";
             this.txt_IP.Size = new System.Drawing.Size(100, 21);
             this.txt_IP.TabIndex = 6;
-            this.txt_IP.Text = "192.168.1.150";
+            this.txt_IP.Text = "127.0.0.1";
             this.txt_IP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tableLayoutPanel1

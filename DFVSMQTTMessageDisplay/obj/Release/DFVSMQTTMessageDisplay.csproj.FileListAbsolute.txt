@@ -19,3 +19,23 @@ F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessag
 F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\obj\Release\分布式光纤系统-警报信息展示工具 V1.0.exe
 F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\obj\Release\分布式光纤系统-警报信息展示工具 V1.0.pdb
 F:\Demo\DFVSMQTTMessageDisplay\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.csprojAssemblyReference.cache
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\分布式光纤系统-警报信息展示工具 V1.0.exe.config
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\分布式光纤系统-警报信息展示工具 V1.0.exe.manifest
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\分布式光纤系统-警报信息展示工具 V1.0.application
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\分布式光纤系统-警报信息展示工具 V1.0.exe
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\分布式光纤系统-警报信息展示工具 V1.0.pdb
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\MQTTnet.dll
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\MQTTnet.Extensions.ManagedClient.dll
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\Newtonsoft.Json.dll
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\Newtonsoft.Json.pdb
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\Newtonsoft.Json.xml
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.MQTTMessageDisplay.resources
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.Properties.Resources.resources
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.csproj.GenerateResource.cache
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.csproj.CoreCompileInputs.cache
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\分布式光纤系统-警报信息展示工具 V1.0.TrustInfo.xml
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\分布式光纤系统-警报信息展示工具 V1.0.exe.manifest
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\分布式光纤系统-警报信息展示工具 V1.0.application
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.csproj.CopyComplete
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\分布式光纤系统-警报信息展示工具 V1.0.exe
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\分布式光纤系统-警报信息展示工具 V1.0.pdb

@@ -77,14 +77,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="分布式光纤系统-警报信息展示工具 V1.0.exe" size="29152">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="分布式光纤系统-警报信息展示工具 V1.0.exe" size="30176">
       <assemblyIdentity name="分布式光纤系统-警报信息展示工具 V1.0" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sk6qsUk/CzpXzVEEHRfjJH03deqZkkWT2mzHO3V1d2k=</dsig:DigestValue>
+        <dsig:DigestValue>HiYjUoxlUQ+zW4UGk2CTYmUleC3maW1VEjL6Ufhvubs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
