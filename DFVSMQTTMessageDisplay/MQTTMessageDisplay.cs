@@ -10,6 +10,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using DFVSMQTTMessageDisplay.Model;
+using MQTTnet.Protocol;
 
 namespace DFVSMQTTMessageDisplay
 {
@@ -278,6 +279,72 @@ namespace DFVSMQTTMessageDisplay
 
         }
 
+
+        /// <summary>
+        /// 吸合继电器
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_open_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!mqttClient.IsConnected)
+                {
+                    MessageBox.Show("MQTT服务未连接","警告",MessageBoxButtons.OKCancel,MessageBoxIcon.Exclamation);
+                    return;
+                }
+                this.mqttClient.PublishAsync(new ManagedMqttApplicationMessage()
+                {
+                    ApplicationMessage = new MqttApplicationMessage()
+                    {
+                        Payload = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(new { Closures = new int[] { 1, 2, 3, 4, 5, 6, 7,8 } })),
+                        QualityOfServiceLevel = MqttQualityOfServiceLevel.AtLeastOnce,
+                        Topic = "Relay/00000000-0000-0000-0000-000000000000/Control"
+                    }
+                });
+            }
+            catch (Exception exception)
+            {
+
+            }
+        }
+
+        /// <summary>
+        /// 断开继电器
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+
+           
+            try
+            {
+                if (!mqttClient.IsConnected)
+                {
+                    MessageBox.Show("MQTT服务未连接", "警告", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+                    return;
+                }
+
+
+                this.mqttClient.PublishAsync(new ManagedMqttApplicationMessage()
+                {
+
+                
+                    ApplicationMessage = new MqttApplicationMessage()
+                    {
+                        Payload = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(new { Ups = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 } })),
+                        QualityOfServiceLevel = MqttQualityOfServiceLevel.AtLeastOnce,
+                        Topic = "Relay/00000000-0000-0000-0000-000000000000/Control"
+                    }
+                });
+            }
+            catch (Exception exception)
+            {
+
+            }
+        }
 
     }
 }
