@@ -29,7 +29,6 @@ F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\MQTTne
 F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\Newtonsoft.Json.dll
 F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\Newtonsoft.Json.pdb
 F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\Newtonsoft.Json.xml
-F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.csprojAssemblyReference.cache
 F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.MQTTMessageDisplay.resources
 F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.Properties.Resources.resources
 F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.csproj.GenerateResource.cache

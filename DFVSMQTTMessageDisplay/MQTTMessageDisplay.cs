@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Timers;
 using DFVSMQTTMessageDisplay.Model;
 using MQTTnet.Protocol;
 
@@ -43,11 +44,24 @@ namespace DFVSMQTTMessageDisplay
         /// </summary>
         private String clientID = Guid.NewGuid().ToString();
 
+        /// <summary>
+        /// 是否自动关闭计时器
+        /// </summary>
+        private bool ischecked = false;
+
+        //定义Timer类变量
+        private System.Timers.Timer Mytimer;
+        long TimeCount;
 
         public MQTTMessageDisplay()
         {
             InitializeComponent();
+
+            btn_MQTTClose.Enabled = false; //Text = "启动MQTT监听";
+           
+
             Load += Form1_Load;
+
         }
 
         /// <summary>
@@ -68,7 +82,7 @@ namespace DFVSMQTTMessageDisplay
             mqttClient.SynchronizingSubscriptionsFailed += MqttClient_SynchronizingSubscriptionsFailed;
             //数据接收事件
             mqttClient.ApplicationMessageReceived += MqttClient_ApplicationMessageReceived;
-           
+
         }
         /// <summary>
         /// 启动mqtt监听
@@ -77,36 +91,46 @@ namespace DFVSMQTTMessageDisplay
         /// <param name="e"></param>
         private void btn_MQTTStar_Click(object sender, EventArgs e)
         {
-            if (mqttClient.IsStarted)
+            mqrrOptionsBuilder = new MqttClientOptionsBuilder();
+            mqrrOptionsBuilder.WithClientId(clientID);
+            mqrrOptionsBuilder.WithCleanSession(true);
+            mqrrOptionsBuilder.WithTcpServer("127.0.0.1", 1883);
+            managedMqttClientOptionsBuilder = new ManagedMqttClientOptionsBuilder();
+            managedMqttClientOptionsBuilder.WithAutoReconnectDelay(TimeSpan.FromSeconds(10));
+
+            managedMqttClientOptionsBuilder.WithClientOptions(mqrrOptionsBuilder);
+            mqttClient.StartAsync(managedMqttClientOptionsBuilder.Build());
+            mqttClient.SubscribeAsync("DFVS/FiberStatus");
+            mqttClient.SubscribeAsync("DFVS/Alarms");
+         
+
+            btn_MQTTStar.Invoke(new MethodInvoker(delegate
             {
-                mqttClient.StopAsync();
-                btn_MQTTStar.Invoke(new MethodInvoker(delegate
-                {
-                    btn_MQTTStar.Text = "启动MQTT监听";
-                }));
-
-               
-            }
-            else
+                btn_MQTTStar.Enabled = false; //Text = "启动MQTT监听";
+            }));
+            btn_MQTTClose.Invoke(new MethodInvoker(delegate
             {
-                mqrrOptionsBuilder = new MqttClientOptionsBuilder();
-                mqrrOptionsBuilder.WithClientId(clientID);
-                mqrrOptionsBuilder.WithCleanSession(true);
-                mqrrOptionsBuilder.WithTcpServer(txt_IP.Text.Trim(), 1883);
-                managedMqttClientOptionsBuilder = new ManagedMqttClientOptionsBuilder();
-                managedMqttClientOptionsBuilder.WithAutoReconnectDelay(TimeSpan.FromSeconds(10));
-             
-                managedMqttClientOptionsBuilder.WithClientOptions(mqrrOptionsBuilder);
-                mqttClient.StartAsync(managedMqttClientOptionsBuilder.Build());
-                btn_MQTTStar.Invoke(new MethodInvoker(delegate
+                btn_MQTTClose.Enabled = true; //Text = "启动MQTT监听";
+            }));
+        }
+
+        private void Mytimer_tick(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                if (mqttClient.IsConnected)
                 {
-                    btn_MQTTStar.Text = "停止MQTT监听";
-                }));
-
-               
+                    this.mqttClient.PublishAsync(new ManagedMqttApplicationMessage()
+                    {
+                        ApplicationMessage = new MqttApplicationMessage()
+                        {
+                            Payload = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(new { Ups = new int[] { 0,1, 2, 3, 4, 5, 6, 7 } })),
+                            QualityOfServiceLevel = MqttQualityOfServiceLevel.AtLeastOnce,
+                            Topic = "Relay/00000000-0000-0000-0000-000000000000/Control"
+                        }
+                    });
+                }
             }
-
-
         }
 
         /// <summary>
@@ -193,42 +217,8 @@ namespace DFVSMQTTMessageDisplay
             }
         }
 
-        /// <summary>
-        /// 监听断纤警报
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btn_Broken_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                mqttClient.SubscribeAsync("DFVS/FiberStatus");
-            }
-            catch (Exception exception)
-            {
-
-            }
-
-        }
-
-        /// <summary>
-        ///  监听一般警报
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btn_Alarm_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                mqttClient.SubscribeAsync("DFVS/Alarms");
-            }
-            catch (Exception exception)
-            {
-
-            }
 
 
-        }
 
         /// <summary>
         /// 显示自动增长行号
@@ -291,14 +281,14 @@ namespace DFVSMQTTMessageDisplay
             {
                 if (!mqttClient.IsConnected)
                 {
-                    MessageBox.Show("MQTT服务未连接","警告",MessageBoxButtons.OKCancel,MessageBoxIcon.Exclamation);
+                    MessageBox.Show("MQTT服务未连接", "警告", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
                     return;
                 }
                 this.mqttClient.PublishAsync(new ManagedMqttApplicationMessage()
                 {
                     ApplicationMessage = new MqttApplicationMessage()
                     {
-                        Payload = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(new { Closures = new int[] { 1, 2, 3, 4, 5, 6, 7,8 } })),
+                        Payload = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(new { Closures = new int[] {0, 1, 2, 3, 4, 5, 6, 7} })),
                         QualityOfServiceLevel = MqttQualityOfServiceLevel.AtLeastOnce,
                         Topic = "Relay/00000000-0000-0000-0000-000000000000/Control"
                     }
@@ -318,7 +308,7 @@ namespace DFVSMQTTMessageDisplay
         private void btn_close_Click(object sender, EventArgs e)
         {
 
-           
+
             try
             {
                 if (!mqttClient.IsConnected)
@@ -331,10 +321,10 @@ namespace DFVSMQTTMessageDisplay
                 this.mqttClient.PublishAsync(new ManagedMqttApplicationMessage()
                 {
 
-                
+
                     ApplicationMessage = new MqttApplicationMessage()
                     {
-                        Payload = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(new { Ups = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 } })),
+                        Payload = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(new { Ups = new int[] { 0,1, 2, 3, 4, 5, 6, 7} })),
                         QualityOfServiceLevel = MqttQualityOfServiceLevel.AtLeastOnce,
                         Topic = "Relay/00000000-0000-0000-0000-000000000000/Control"
                     }
@@ -346,5 +336,73 @@ namespace DFVSMQTTMessageDisplay
             }
         }
 
+
+        /// <summary>
+        /// 停止监听
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_MQTTClose_Click(object sender, EventArgs e)
+        {
+            if (mqttClient.IsStarted)
+            {
+                Mytimer.Stop();
+                mqttClient.StopAsync();
+                btn_MQTTStar.Invoke(new MethodInvoker(delegate
+                {
+                    btn_MQTTStar.Enabled = true; //Text = "启动MQTT监听";
+                }));
+                btn_MQTTClose.Invoke(new MethodInvoker(delegate
+                {
+                    btn_MQTTClose.Enabled = false; //Text = "启动MQTT监听";
+                }));
+
+
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != '\b')//这是允许输入退格键  
+            {
+                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字  
+                {
+                    e.Handled = true;
+                }
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                if (string.IsNullOrEmpty(textBox1.Text))
+                {
+                    MessageBox.Show("延时关闭时间不能为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Invoke(new MethodInvoker(delegate { checkBox1.Checked = false; }));
+                    return;
+                }
+                this.Invoke(new MethodInvoker(delegate { textBox1.Enabled = false; }));
+
+                Mytimer = new System.Timers.Timer(Convert.ToInt32(textBox1.Text.Trim())*60*1000);
+                //设置重复计时
+                Mytimer.AutoReset = true;
+                //设置执行System.Timers.Timer.Elapsed事件
+
+                Mytimer.Elapsed += new System.Timers.ElapsedEventHandler(Mytimer_tick);
+                Mytimer.Start();
+            }
+            else
+            {
+                if (Mytimer!=null)
+                {
+                    Mytimer.Stop();
+                    this.Invoke(new MethodInvoker(delegate { textBox1.Enabled = true; }));
+                }
+              
+
+
+            }
+        }
     }
 }

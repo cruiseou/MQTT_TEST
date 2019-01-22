@@ -28,11 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_IP = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Broken = new System.Windows.Forms.Button();
-            this.btn_Alarm = new System.Windows.Forms.Button();
             this.btn_Clear = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -55,33 +51,16 @@
             this.btn_MQTTStar = new System.Windows.Forms.Button();
             this.btn_open = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
+            this.btn_MQTTClose = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 40);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "IP地址：";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txt_IP
-            // 
-            this.txt_IP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_IP.Location = new System.Drawing.Point(142, 9);
-            this.txt_IP.Name = "txt_IP";
-            this.txt_IP.Size = new System.Drawing.Size(100, 21);
-            this.txt_IP.TabIndex = 6;
-            this.txt_IP.Text = "127.0.0.1";
-            this.txt_IP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tableLayoutPanel1
             // 
@@ -94,16 +73,16 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.33702F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.12865F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.3386F));
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txt_IP, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btn_Broken, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btn_Alarm, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btn_Clear, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btn_MQTTStar, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btn_open, 6, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btn_close, 7, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn_MQTTStar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn_MQTTClose, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Clear, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn_open, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn_close, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.checkBox1, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.textBox1, 7, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -114,34 +93,12 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1267, 461);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
-            // btn_Broken
-            // 
-            this.btn_Broken.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Broken.Location = new System.Drawing.Point(264, 3);
-            this.btn_Broken.Name = "btn_Broken";
-            this.btn_Broken.Size = new System.Drawing.Size(116, 34);
-            this.btn_Broken.TabIndex = 7;
-            this.btn_Broken.Text = "监听断纤警报";
-            this.btn_Broken.UseVisualStyleBackColor = true;
-            this.btn_Broken.Click += new System.EventHandler(this.btn_Broken_Click);
-            // 
-            // btn_Alarm
-            // 
-            this.btn_Alarm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Alarm.Location = new System.Drawing.Point(386, 3);
-            this.btn_Alarm.Name = "btn_Alarm";
-            this.btn_Alarm.Size = new System.Drawing.Size(157, 34);
-            this.btn_Alarm.TabIndex = 8;
-            this.btn_Alarm.Text = "监听警报 ";
-            this.btn_Alarm.UseVisualStyleBackColor = true;
-            this.btn_Alarm.Click += new System.EventHandler(this.btn_Alarm_Click);
-            // 
             // btn_Clear
             // 
             this.btn_Clear.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Clear.Location = new System.Drawing.Point(549, 3);
+            this.btn_Clear.Location = new System.Drawing.Point(264, 3);
             this.btn_Clear.Name = "btn_Clear";
-            this.btn_Clear.Size = new System.Drawing.Size(158, 34);
+            this.btn_Clear.Size = new System.Drawing.Size(116, 34);
             this.btn_Clear.TabIndex = 9;
             this.btn_Clear.Text = "清空警报信息";
             this.btn_Clear.UseVisualStyleBackColor = true;
@@ -303,9 +260,9 @@
             // btn_MQTTStar
             // 
             this.btn_MQTTStar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_MQTTStar.Location = new System.Drawing.Point(713, 3);
+            this.btn_MQTTStar.Location = new System.Drawing.Point(3, 3);
             this.btn_MQTTStar.Name = "btn_MQTTStar";
-            this.btn_MQTTStar.Size = new System.Drawing.Size(239, 34);
+            this.btn_MQTTStar.Size = new System.Drawing.Size(117, 34);
             this.btn_MQTTStar.TabIndex = 12;
             this.btn_MQTTStar.Text = "启动MQTT监听";
             this.btn_MQTTStar.UseVisualStyleBackColor = true;
@@ -314,9 +271,9 @@
             // btn_open
             // 
             this.btn_open.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_open.Location = new System.Drawing.Point(958, 3);
+            this.btn_open.Location = new System.Drawing.Point(386, 3);
             this.btn_open.Name = "btn_open";
-            this.btn_open.Size = new System.Drawing.Size(135, 34);
+            this.btn_open.Size = new System.Drawing.Size(157, 34);
             this.btn_open.TabIndex = 13;
             this.btn_open.Text = "吸合继电器";
             this.btn_open.UseVisualStyleBackColor = true;
@@ -325,13 +282,55 @@
             // btn_close
             // 
             this.btn_close.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_close.Location = new System.Drawing.Point(1099, 3);
+            this.btn_close.Location = new System.Drawing.Point(549, 3);
             this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(165, 34);
+            this.btn_close.Size = new System.Drawing.Size(158, 34);
             this.btn_close.TabIndex = 14;
             this.btn_close.Text = "断开继电器";
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
+            // btn_MQTTClose
+            // 
+            this.btn_MQTTClose.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_MQTTClose.Location = new System.Drawing.Point(126, 3);
+            this.btn_MQTTClose.Name = "btn_MQTTClose";
+            this.btn_MQTTClose.Size = new System.Drawing.Size(132, 34);
+            this.btn_MQTTClose.TabIndex = 15;
+            this.btn_MQTTClose.Text = "停止MQTT监听";
+            this.btn_MQTTClose.UseVisualStyleBackColor = true;
+            this.btn_MQTTClose.Click += new System.EventHandler(this.btn_MQTTClose_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(766, 12);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(132, 16);
+            this.checkBox1.TabIndex = 16;
+            this.checkBox1.Text = "是否自动关闭继电器";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(969, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 12);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "延时关闭时间(分钟)";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Location = new System.Drawing.Point(1131, 9);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 21);
+            this.textBox1.TabIndex = 18;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // MQTTMessageDisplay
             // 
@@ -353,11 +352,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_IP;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btn_Broken;
-        private System.Windows.Forms.Button btn_Alarm;
         private System.Windows.Forms.Button btn_Clear;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -380,6 +375,10 @@
         private System.Windows.Forms.Button btn_MQTTStar;
         private System.Windows.Forms.Button btn_open;
         private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.Button btn_MQTTClose;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
