@@ -4,7 +4,10 @@ using System;
 namespace DFVSMQTTMessageDisplay.Model
 {
     public class AlarmInfoEntity
-    {/// <summary>
+    {
+        
+        
+        /// <summary>
         /// 设备唯一标识（设备名）
         /// </summary>
       

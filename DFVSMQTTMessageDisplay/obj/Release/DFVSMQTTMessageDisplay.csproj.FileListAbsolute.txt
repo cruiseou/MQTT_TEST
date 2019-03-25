@@ -39,3 +39,61 @@ F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\分�
 F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.csproj.CopyComplete
 F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\分布式光纤系统-警报信息展示工具 V1.0.exe
 F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\分布式光纤系统-警报信息展示工具 V1.0.pdb
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.dll
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.Protocol.DFTS.dll
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.Protocol.DFVS.dll
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.Protocol.dll
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Middleware.DFSensor.dll
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ICSharpCode.SharpZipLib.dll
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\NPOI.dll
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\NPOI.OOXML.dll
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\NPOI.OpenXml4Net.dll
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\NPOI.OpenXmlFormats.dll
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.pdb
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.Protocol.pdb
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.Protocol.DFTS.pdb
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.Protocol.DFVS.pdb
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Middleware.DFSensor.pdb
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ICSharpCode.SharpZipLib.xml
+F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.csprojAssemblyReference.cache
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\分布式光纤系统-警报信息展示工具 V1.0.exe.config
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\分布式光纤系统-警报信息展示工具 V1.0.exe.manifest
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\分布式光纤系统-警报信息展示工具 V1.0.application
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\分布式光纤系统-警报信息展示工具 V1.0.exe
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\分布式光纤系统-警报信息展示工具 V1.0.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.Protocol.DFTS.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.Protocol.DFVS.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.Protocol.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Middleware.DFSensor.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ICSharpCode.SharpZipLib.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\MQTTnet.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\MQTTnet.Extensions.ManagedClient.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\Newtonsoft.Json.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\NPOI.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\NPOI.OOXML.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\NPOI.OpenXml4Net.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\NPOI.OpenXmlFormats.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.Protocol.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.Protocol.DFTS.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.Protocol.DFVS.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Middleware.DFSensor.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ICSharpCode.SharpZipLib.xml
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\Newtonsoft.Json.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\Newtonsoft.Json.xml
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.csprojAssemblyReference.cache
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.MQTTMessageDisplay.resources
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.Properties.Resources.resources
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.csproj.GenerateResource.cache
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.csproj.CoreCompileInputs.cache
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\分布式光纤系统-警报信息展示工具 V1.0.TrustInfo.xml
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\分布式光纤系统-警报信息展示工具 V1.0.exe.manifest
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\分布式光纤系统-警报信息展示工具 V1.0.application
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.csproj.CopyComplete
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\分布式光纤系统-警报信息展示工具 V1.0.exe
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\分布式光纤系统-警报信息展示工具 V1.0.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.ManagedInvoke.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Middleware.DFVSensor.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.ManagedInvoke.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Middleware.DFVSensor.pdb

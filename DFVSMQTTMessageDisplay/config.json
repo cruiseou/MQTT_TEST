@@ -61,5 +61,11 @@
     "alarms": "發生{alarmType}警報，位於：{location}，等級：{level} 置信率：{possibility}，事件寬度：{width}，最大強度：{maxIntensity}",
     "brokenTopic": "發生斷纖故障",
     "broken": "斷纖故障，位於：{location}米"
-  }
+  },
+
+
+  "ConnectionStrings": {
+    "DefaultConnection": "server=192.168.2.150;database=Consumer_Monitoring;uid=sa;pwd=sa;"
+  },
+ 
 }

@@ -39,3 +39,47 @@ F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\分布
 F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.csproj.CopyComplete
 F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\分布式光纤系统-警报信息展示工具 V1.0.exe
 F:\Demo\DFVSMQTTMessageDisplay\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\分布式光纤系统-警报信息展示工具 V1.0.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\分布式光纤系统-警报信息展示工具 V1.0.exe.config
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\分布式光纤系统-警报信息展示工具 V1.0.exe.manifest
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\分布式光纤系统-警报信息展示工具 V1.0.application
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\分布式光纤系统-警报信息展示工具 V1.0.exe
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\分布式光纤系统-警报信息展示工具 V1.0.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\ATIAN.Common.ManagedInvoke.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\ATIAN.Common.MQTTLib.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\ATIAN.Common.MQTTLib.Protocol.DFTS.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\ATIAN.Common.MQTTLib.Protocol.DFVS.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\ATIAN.Common.MQTTLib.Protocol.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\ATIAN.Middleware.DFSensor.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\ATIAN.Middleware.DFVSensor.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\ICSharpCode.SharpZipLib.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\MQTTnet.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\MQTTnet.Extensions.ManagedClient.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\Newtonsoft.Json.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\NPOI.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\NPOI.OOXML.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\NPOI.OpenXml4Net.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\NPOI.OpenXmlFormats.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\ATIAN.Common.ManagedInvoke.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\ATIAN.Common.MQTTLib.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\ATIAN.Common.MQTTLib.Protocol.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\ATIAN.Common.MQTTLib.Protocol.DFTS.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\ATIAN.Common.MQTTLib.Protocol.DFVS.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\ATIAN.Middleware.DFSensor.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\ATIAN.Middleware.DFVSensor.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\ICSharpCode.SharpZipLib.xml
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\Newtonsoft.Json.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Debug\Newtonsoft.Json.xml
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.MQTTMessageDisplay.resources
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.Properties.Resources.resources
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.Unit.UserControl1.resources
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.csproj.GenerateResource.cache
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.csproj.CoreCompileInputs.cache
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\分布式光纤系统-警报信息展示工具 V1.0.TrustInfo.xml
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\分布式光纤系统-警报信息展示工具 V1.0.exe.manifest
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\分布式光纤系统-警报信息展示工具 V1.0.application
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.csproj.CopyComplete
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\分布式光纤系统-警报信息展示工具 V1.0.exe
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\分布式光纤系统-警报信息展示工具 V1.0.pdb
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.csprojAssemblyReference.cache
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.Unit.AlarmAndFiberRealTimeRecord.resources
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Debug\DFVSMQTTMessageDisplay.Unit.AlarmAndFiberHistoryRecord.resources
