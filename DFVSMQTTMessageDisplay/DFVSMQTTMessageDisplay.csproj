@@ -66,6 +66,26 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="ATIAN.Common.ManagedInvoke">
       <HintPath>..\..\..\ATIAN-product-DTS-00002\src\ATIAN.Common.ManagedInvoke\obj\Debug\netstandard2.0\ATIAN.Common.ManagedInvoke.dll</HintPath>
@@ -87,6 +107,12 @@
     </Reference>
     <Reference Include="ATIAN.Middleware.DFVSensor">
       <HintPath>..\..\..\ATIAN-product-DTS-00002\src\ATIAN.Middleware.DFVSSensor\obj\Debug\netstandard2.0\ATIAN.Middleware.DFVSensor.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=1.0.0.999, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpZipLib.1.0.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
@@ -113,10 +139,12 @@
       <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
@@ -130,7 +158,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="atenDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>atenDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="atenDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>atenDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="atenDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>atenDB.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Config.cs" />
+    <Compile Include="DFVSChannelAlarm.cs">
+      <DependentUpon>atenDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DFVSChannelFiber.cs">
+      <DependentUpon>atenDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\AlarmInfoEntity.cs" />
     <Compile Include="Model\EventEntity.cs" />
     <Compile Include="Model\EventType.cs" />
@@ -157,6 +206,7 @@
     <Compile Include="Unit\AlarmAndFiberHistoryRecord.Designer.cs">
       <DependentUpon>AlarmAndFiberHistoryRecord.cs</DependentUpon>
     </Compile>
+    <Compile Include="Unit\ExpressionExtension.cs" />
     <Compile Include="Unit\UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -184,6 +234,13 @@
     <EmbeddedResource Include="Unit\UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="atenDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>atenDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="atenDB.edmx.diagram">
+      <DependentUpon>atenDB.edmx</DependentUpon>
+    </None>
     <None Include="config.json" />
     <None Include="DFVSMQTTMessageDisplay_TemporaryKey.pfx" />
     <None Include="packages.config" />
@@ -215,6 +272,24 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="atenDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>atenDB.Context.cs</LastGenOutput>
+      <DependentUpon>atenDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="atenDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>atenDB.cs</LastGenOutput>
+      <DependentUpon>atenDB.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tools\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

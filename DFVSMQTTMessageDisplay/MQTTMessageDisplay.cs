@@ -22,20 +22,6 @@ namespace DFVSMQTTMessageDisplay
         private MOTTDFVS mqttService = null;
 
         /// <summary>
-        /// 一般警报
-        /// </summary>
-        private List<ATIAN.Common.MQTTLib.Protocol.DFVS.ChannelAlarmModel> alarmsList = new List<ATIAN.Common.MQTTLib.Protocol.DFVS.ChannelAlarmModel>();
-
-
-        /// <summary>
-        /// 断纤警报
-        /// </summary>
-        private List<ATIAN.Common.MQTTLib.Protocol.ChannelFiberModel> faultlList = new List<ATIAN.Common.MQTTLib.Protocol.ChannelFiberModel>();
-
-
-
-
-        /// <summary>
         /// 
         /// </summary>
         private String clientID = Guid.NewGuid().ToString();
@@ -49,45 +35,10 @@ namespace DFVSMQTTMessageDisplay
         private System.Timers.Timer Mytimer;
         long TimeCount;
 
+     
         public MQTTMessageDisplay()
         {
             InitializeComponent();
-
-            string filePath = System.Environment.CurrentDirectory;
-
-            string filename = "AlarmAndFiberHistory-" + DateTime.Now.ToString("yyyy-MM-dd") + ".xls";
-            if (!File.Exists(filePath + filename))
-            {
-                HSSFWorkbook workbook = new HSSFWorkbook();
-                ICellStyle cellStyle = workbook.CreateCellStyle();
-                cellStyle.FillPattern = FillPattern.SolidForeground;
-                cellStyle.FillBackgroundColor = HSSFColor.Red.Index;
-                ISheet AlarmSheet = workbook.CreateSheet("AlarmHistory ");
-                IRow AlarmRow = AlarmSheet.CreateRow(0);
-                string[] AlarmCellName = { "TypeID","TypeName","Level","Possibility","CenterPosition","EventWidth", "FirstPushTime", "LastPushTime",   "MaxIntensity","SensorID","ChannelID","PushTime"};
-                for (int i = 0; i < AlarmCellName.Length; i++)
-                {
-                    ICell cell = AlarmRow.CreateCell(i, CellType.String);
-                    cell.SetCellValue(AlarmCellName[i]);
-                }
-                ISheet FiberSheet = workbook.CreateSheet("FiberHistory ");
-                IRow FiberRow = FiberSheet.CreateRow(0);
-                string[] FibermCellName =
-                {
-                    "FiberStatus", "FiberBreakLength", "SensorID",
-                    "ChannelID", "PushTime"
-                };
-
-                for (int i = 0; i < FibermCellName.Length; i++)
-                {
-                    ICell cell = FiberRow.CreateCell(i, CellType.String);
-                    cell.SetCellValue(FibermCellName[i]);
-                }
-                FileStream fs = new FileStream(Path.Combine(filePath, filename), FileMode.Create);
-                workbook.Write(fs);
-                fs.Close();
-                fs.Dispose();
-            }
         }
 
 
@@ -99,22 +50,15 @@ namespace DFVSMQTTMessageDisplay
         /// <param name="e"></param>
         private void MqttService_AlaramDataBing(object sender, DataBingArgs<ATIAN.Common.MQTTLib.Protocol.DFVS.ChannelAlarmModel> e)
         {
-
-            if (alarmsList.Count >= 100)
-            {
-                alarmsList.RemoveAt(99);
-            }
-            alarmsList.AddRange(e.DataItems);
-
-            dataGridView2.Invoke(new MethodInvoker(delegate
-            {
-                this.dataGridView2.DataSource = alarmsList.ToArray();
-                this.dataGridView2.Refresh();
-            }));
-
+            e.DataItems = e.DataItems.Where(o => o.Level > 0).ToList();
+            userControl11.AddAlarmsRecord(e.DataItems);
         }
 
-
+        /// <summary>
+        /// 定时关闭继电器
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Mytimer_tick(object sender, System.Timers.ElapsedEventArgs e)
         {
             if (checkBox1.Checked)
@@ -125,37 +69,10 @@ namespace DFVSMQTTMessageDisplay
                 }
                 catch (Exception exception)
                 {
+
                 }
 
             }
-        }
-
-
-
-
-
-        /// <summary>
-        /// 显示自动增长行号
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void dataGridView2_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
-        {
-            SolidBrush b = new SolidBrush(this.dataGridView2.RowHeadersDefaultCellStyle.ForeColor);
-            e.Graphics.DrawString((e.RowIndex + 1).ToString(System.Globalization.CultureInfo.CurrentUICulture), this.dataGridView2.DefaultCellStyle.Font, b, e.RowBounds.Location.X + 20, e.RowBounds.Location.Y + 4);
-
-        }
-
-        /// <summary>
-        ///  显示自动增长行号
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void dataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
-        {
-            SolidBrush b = new SolidBrush(this.dataGridView1.RowHeadersDefaultCellStyle.ForeColor);
-            e.Graphics.DrawString((e.RowIndex + 1).ToString(System.Globalization.CultureInfo.CurrentUICulture), this.dataGridView1.DefaultCellStyle.Font, b, e.RowBounds.Location.X + 20, e.RowBounds.Location.Y + 4);
-
         }
 
         /// <summary>
@@ -165,24 +82,8 @@ namespace DFVSMQTTMessageDisplay
         /// <param name="e"></param>
         private void btn_Clear_Click(object sender, EventArgs e)
         {
-            //断纤警报清除
-            dataGridView1.Invoke(new MethodInvoker(delegate
-            {
-                faultlList.Clear();
-                dataGridView1.DataSource = faultlList.ToArray();
-                dataGridView1.Refresh();
-            }));
-
-            //一般警报清除
-            dataGridView2.Invoke(new MethodInvoker(delegate
-            {
-                alarmsList.Clear();
-                dataGridView2.DataSource = alarmsList.ToArray();
-                dataGridView2.Refresh();
-            }));
-
+            userControl11.DataClear();
         }
-
 
         /// <summary>
         /// 吸合继电器
@@ -210,8 +111,11 @@ namespace DFVSMQTTMessageDisplay
             mqttService.RelayControl(false);
         }
 
-
-
+        /// <summary>
+        /// 限制只能输入数字
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar != '\b')//这是允许输入退格键  
@@ -223,6 +127,11 @@ namespace DFVSMQTTMessageDisplay
             }
         }
 
+        /// <summary>
+        /// 是否启动延时关闭继电器功能
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -275,17 +184,9 @@ namespace DFVSMQTTMessageDisplay
         private void MqttService_FiberDataBing(object sender, DataBingArgs<ATIAN.Common.MQTTLib.Protocol.ChannelFiberModel> e)
         {
 
-            if (faultlList.Count >= 100)
-            {
-                faultlList.RemoveAt(99);
-            }
-            faultlList.AddRange(e.DataItems);
+            e.DataItems = e.DataItems.Where(o => o.FiberStatus !=11).ToList();
+            userControl11.AddFiberRecord(e.DataItems);
 
-            dataGridView1.Invoke(new MethodInvoker(delegate
-            {
-                dataGridView1.DataSource = faultlList.ToArray();
-                dataGridView1.Refresh();
-            }));
         }
     }
 }

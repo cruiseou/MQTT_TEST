@@ -16,5 +16,40 @@ namespace DFVSMQTTMessageDisplay.Unit
         {
             InitializeComponent();
         }
+
+
+        /// <summary>
+        /// 清除实时警报数据
+        /// </summary>
+        public void DataClear()
+        {
+            alarmAndFiberRealTimeRecord1.ClearData();
+        }
+
+
+        /// <summary>
+        /// 添加警报
+        /// </summary>
+        /// <param name="alarmsList"></param>
+        public void AddAlarmsRecord(List<ATIAN.Common.MQTTLib.Protocol.DFVS.ChannelAlarmModel> alarmsList)
+        {
+            alarmAndFiberRealTimeRecord1.AddAlarmData(alarmsList);
+            alarmHistory1.AddAlarmData(alarmsList);
+        }
+
+
+        /// <summary>
+        /// 添加光纤状态警报
+        /// </summary>
+        /// <param name="faultlList"></param>
+
+        public   void AddFiberRecord(List<ATIAN.Common.MQTTLib.Protocol.ChannelFiberModel> faultlList)
+        {
+            alarmAndFiberRealTimeRecord1.AddFiberData(faultlList);
+            alarmHistory1.AddFiberData(faultlList);
+        }
+
+
+
     }
 }

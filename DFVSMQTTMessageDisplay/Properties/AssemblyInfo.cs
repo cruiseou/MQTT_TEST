@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("分布式光纤系统-警报信息展示工具 V1.0")]
-[assembly: AssemblyDescription("分布式光纤系统-警报信息展示工具 V1.0")]
+[assembly: AssemblyTitle("分布式光纤系统-警报信息展示工具 V1.1")]
+[assembly: AssemblyDescription("分布式光纤系统-警报信息展示工具 V1.1")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("无锡亚天光电")]
-[assembly: AssemblyProduct("分布式光纤系统-警报信息展示工具 V1.0")]
+[assembly: AssemblyProduct("分布式光纤系统-警报信息展示工具 V1.1")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -34,4 +34,4 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly:AssemblyInformationalVersion("2018-12-20")]
+[assembly:AssemblyInformationalVersion("2019-3-26")]
