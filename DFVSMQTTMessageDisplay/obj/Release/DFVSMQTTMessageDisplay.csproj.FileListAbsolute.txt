@@ -91,6 +91,7 @@ F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release
 F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\Newtonsoft.Json.pdb
 F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\Newtonsoft.Json.xml
 F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\zh-Hans\EntityFramework.resources.dll
+F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.csprojAssemblyReference.cache
 F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.MQTTMessageDisplay.resources
 F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.Properties.Resources.resources
 F:\Code\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.Unit.AlarmAndFiberRealTimeRecord.resources

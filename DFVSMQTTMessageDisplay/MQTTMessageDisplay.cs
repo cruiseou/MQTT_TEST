@@ -184,7 +184,7 @@ namespace DFVSMQTTMessageDisplay
         private void MqttService_FiberDataBing(object sender, DataBingArgs<ATIAN.Common.MQTTLib.Protocol.ChannelFiberModel> e)
         {
 
-            e.DataItems = e.DataItems.Where(o => o.FiberStatus !=11).ToList();
+            e.DataItems = e.DataItems.Where(o => o.FiberStatus !=11 && o.FiberStatus!=7).ToList();
             userControl11.AddFiberRecord(e.DataItems);
 
         }

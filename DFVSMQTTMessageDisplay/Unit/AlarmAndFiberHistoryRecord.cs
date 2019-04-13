@@ -1,21 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
-using ATIAN.Common.MQTTLib.Protocol.DFVS;
-using NPOI.POIFS.FileSystem;
-using NPOI.SS.UserModel;
-using NPOI.HSSF.UserModel;
-using System.Reflection;
-using System.Data.OleDb;
-using System.Security.Cryptography.X509Certificates;
 using System.Linq.Expressions;
+using System.Windows.Forms;
 
 namespace DFVSMQTTMessageDisplay.Unit
 {
@@ -68,7 +57,7 @@ namespace DFVSMQTTMessageDisplay.Unit
         public void AddAlarmData(List<ATIAN.Common.MQTTLib.Protocol.DFVS.ChannelAlarmModel> alarms)
         {
             alarmsList.AddRange(alarms);
-            if (alarmsList.Count >= 100)
+            if (alarmsList.Count >= 10)
             {
                 try
                 {
@@ -117,7 +106,7 @@ namespace DFVSMQTTMessageDisplay.Unit
         public void AddFiberData(List<ATIAN.Common.MQTTLib.Protocol.ChannelFiberModel> fault)
         {
             faultlList.AddRange(fault);
-            if (faultlList.Count >= 100)
+            if (faultlList.Count >= 10)
             {
                 try
                 {
