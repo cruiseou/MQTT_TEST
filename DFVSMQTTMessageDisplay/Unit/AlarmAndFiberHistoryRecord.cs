@@ -64,6 +64,7 @@ namespace DFVSMQTTMessageDisplay.Unit
                     List<DFVSChannelAlarm> DFVSChannelAlarmlist = new List<DFVSChannelAlarm>();
                     for (int i = 0; i < alarmsList.Count; i++)
                     {
+
                         DFVSChannelAlarmlist.Add(new DFVSChannelAlarm()
                         {
                             TypeID = alarmsList[i].TypeID,
@@ -113,18 +114,29 @@ namespace DFVSMQTTMessageDisplay.Unit
                     List<DFVSChannelFiber> DFVSChannelAlarmlist = new List<DFVSChannelFiber>();
                     for (int i = 0; i < faultlList.Count; i++)
                     {
-                        DFVSChannelAlarmlist.Add(new DFVSChannelFiber()
+                        if (faultlList[i].FiberStatus!=1|| faultlList[i].FiberStatus != 0)
                         {
-                            FiberStatus = faultlList[i].FiberStatus,
-                            FiberBreakLength = faultlList[i].FiberBreakLength,
-                            PushTime = faultlList[i].PushTime,
-                            SensorID = faultlList[i].SensorID,
-                            ChannelID = faultlList[i].ChannelID
-                        });
+                            DFVSChannelAlarmlist.Add(new DFVSChannelFiber()
+                            {
+                                FiberStatus = faultlList[i].FiberStatus,
+                                FiberBreakLength = faultlList[i].FiberBreakLength,
+                                PushTime = faultlList[i].PushTime,
+                                SensorID = faultlList[i].SensorID,
+                                ChannelID = faultlList[i].ChannelID
+                            });
+                        }
+
+                       
                     }
-                    atenDBContainer ef = new atenDBContainer();
-                    ef.DFVSChannelFibers.AddRange(DFVSChannelAlarmlist);
-                    ef.SaveChanges();
+
+                    if (DFVSChannelAlarmlist!=null && DFVSChannelAlarmlist.Count>0)
+                    {
+                        atenDBContainer ef = new atenDBContainer();
+                        ef.DFVSChannelFibers.AddRange(DFVSChannelAlarmlist);
+                        ef.SaveChanges();
+
+                    }
+                  
 
                 }
                 catch (Exception e)

@@ -38,6 +38,10 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -62,10 +66,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.pagerControl1 = new DFVSMQTTMessageDisplay.Control.PagerControl();
+            this.pagerControl2 = new DFVSMQTTMessageDisplay.Control.PagerControl();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -115,12 +117,14 @@
             this.tableLayoutPanel2.Controls.Add(this.label5, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.dateTimePicker4, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.button1, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.pagerControl1, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 17);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1683, 302);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
@@ -142,7 +146,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 53);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1677, 246);
+            this.dataGridView1.Size = new System.Drawing.Size(1677, 211);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView1_RowPostPaint);
             // 
@@ -181,6 +185,42 @@
             this.Column4.DataPropertyName = "PushTime";
             this.Column4.HeaderText = "MQTT消息推送时间";
             this.Column4.Name = "Column4";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(187, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 12);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "报警时间";
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePicker3.Location = new System.Drawing.Point(431, 14);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(195, 21);
+            this.dateTimePicker3.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(745, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(11, 12);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "-";
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePicker4.Location = new System.Drawing.Point(934, 14);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker4.TabIndex = 8;
             // 
             // button1
             // 
@@ -224,12 +264,14 @@
             this.tableLayoutPanel3.Controls.Add(this.label3, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.dateTimePicker2, 5, 0);
             this.tableLayoutPanel3.Controls.Add(this.button2, 6, 0);
+            this.tableLayoutPanel3.Controls.Add(this.pagerControl2, 0, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 17);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1683, 303);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
@@ -258,7 +300,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(3, 53);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(1677, 247);
+            this.dataGridView2.Size = new System.Drawing.Size(1677, 212);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView2_RowPostPaint);
             // 
@@ -410,41 +452,23 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label4
+            // pagerControl1
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(187, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 12);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "报警时间";
+            this.tableLayoutPanel2.SetColumnSpan(this.pagerControl1, 5);
+            this.pagerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pagerControl1.Location = new System.Drawing.Point(3, 270);
+            this.pagerControl1.Name = "pagerControl1";
+            this.pagerControl1.Size = new System.Drawing.Size(1677, 29);
+            this.pagerControl1.TabIndex = 9;
             // 
-            // dateTimePicker3
+            // pagerControl2
             // 
-            this.dateTimePicker3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker3.Location = new System.Drawing.Point(431, 14);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(195, 21);
-            this.dateTimePicker3.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(745, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(11, 12);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "-";
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker4.Location = new System.Drawing.Point(934, 14);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePicker4.TabIndex = 8;
+            this.tableLayoutPanel3.SetColumnSpan(this.pagerControl2, 7);
+            this.pagerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pagerControl2.Location = new System.Drawing.Point(3, 271);
+            this.pagerControl2.Name = "pagerControl2";
+            this.pagerControl2.Size = new System.Drawing.Size(1677, 29);
+            this.pagerControl2.TabIndex = 8;
             // 
             // AlarmAndFiberHistoryRecord
             // 
@@ -508,5 +532,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private Control.PagerControl pagerControl1;
+        private Control.PagerControl pagerControl2;
     }
 }

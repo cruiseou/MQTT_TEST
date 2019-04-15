@@ -174,6 +174,12 @@
       <DependentUpon>atenDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Config.cs" />
+    <Compile Include="Control\PagerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\PagerControl.Designer.cs">
+      <DependentUpon>PagerControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DFVSChannelAlarm.cs">
       <DependentUpon>atenDB.tt</DependentUpon>
     </Compile>
@@ -213,6 +219,9 @@
     <Compile Include="Unit\UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Control\PagerControl.resx">
+      <DependentUpon>PagerControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MQTTMessageDisplay.resx">
       <DependentUpon>MQTTMessageDisplay.cs</DependentUpon>
     </EmbeddedResource>
