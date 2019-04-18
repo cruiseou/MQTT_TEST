@@ -173,7 +173,6 @@ namespace DFVSMQTTMessageDisplay
             mqttService.AlaramDataBing += MqttService_AlaramDataBing;
             mqttService.FiberDataBing += MqttService_FiberDataBing;
             mqttService.Start("127.0.0.1", 1883);
-
         }
 
         /// <summary>
