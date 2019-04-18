@@ -88,25 +88,28 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ATIAN.Common.ManagedInvoke">
-      <HintPath>..\..\..\ATIAN-product-DTS-00002\src\ATIAN.Common.ManagedInvoke\obj\Debug\netstandard2.0\ATIAN.Common.ManagedInvoke.dll</HintPath>
+      <HintPath>..\..\..\..\ATIAN-product-DTS-00002\src\ATIAN.Common.ManagedInvoke\obj\Debug\netstandard2.0\ATIAN.Common.ManagedInvoke.dll</HintPath>
     </Reference>
     <Reference Include="ATIAN.Common.MQTTLib">
-      <HintPath>..\..\..\..\Code\ATIAN-product-DTS-00002\src\ATIAN.Common.MQTTLib\obj\Debug\netstandard2.0\ATIAN.Common.MQTTLib.dll</HintPath>
+      <HintPath>..\..\..\..\ATIAN-product-DTS-00002\src\ATIAN.Common.MQTTLib\obj\Debug\netstandard2.0\ATIAN.Common.MQTTLib.dll</HintPath>
     </Reference>
     <Reference Include="ATIAN.Common.MQTTLib.Protocol">
-      <HintPath>..\..\..\..\Code\ATIAN-product-DTS-00002\src\ATIAN.Common.MQTTLib.Model\obj\Debug\netstandard2.0\ATIAN.Common.MQTTLib.Protocol.dll</HintPath>
+      <HintPath>..\..\..\..\ATIAN-product-DTS-00002\src\ATIAN.Common.MQTTLib.Model\obj\Debug\netstandard2.0\ATIAN.Common.MQTTLib.Protocol.dll</HintPath>
     </Reference>
     <Reference Include="ATIAN.Common.MQTTLib.Protocol.DFTS">
-      <HintPath>..\..\..\..\Code\ATIAN-product-DTS-00002\src\ATIAN.Common.MQTTLib.Protocol.DTS\bin\Debug\netstandard2.0\ATIAN.Common.MQTTLib.Protocol.DFTS.dll</HintPath>
+      <HintPath>..\..\..\..\ATIAN-product-DTS-00002\src\ATIAN.Common.MQTTLib.Protocol.DTS\obj\Debug\netstandard2.0\ATIAN.Common.MQTTLib.Protocol.DFTS.dll</HintPath>
     </Reference>
     <Reference Include="ATIAN.Common.MQTTLib.Protocol.DFVS">
-      <HintPath>..\..\..\..\Code\ATIAN-product-DTS-00002\src\ATIAN.Common.MQTTLib.Protocol.DFVS\bin\Debug\netstandard2.0\ATIAN.Common.MQTTLib.Protocol.DFVS.dll</HintPath>
+      <HintPath>..\..\..\..\ATIAN-product-DTS-00002\src\ATIAN.Common.MQTTLib.Protocol.DFVS\obj\Debug\netstandard2.0\ATIAN.Common.MQTTLib.Protocol.DFVS.dll</HintPath>
     </Reference>
     <Reference Include="ATIAN.Middleware.DFSensor">
-      <HintPath>..\..\..\..\Code\ATIAN-product-DTS-00002\src\ATIAN.Middleware.DFSensor\bin\Debug\netstandard2.0\ATIAN.Middleware.DFSensor.dll</HintPath>
+      <HintPath>..\..\..\..\ATIAN-product-DTS-00002\src\ATIAN.Middleware.DFSensor\obj\Debug\netstandard2.0\ATIAN.Middleware.DFSensor.dll</HintPath>
+    </Reference>
+    <Reference Include="ATIAN.Middleware.DFTSensor">
+      <HintPath>..\..\..\..\ATIAN-product-DTS-00002\src\ATIAN.Middleware.DTSSensor\obj\Debug\netstandard2.0\ATIAN.Middleware.DFTSensor.dll</HintPath>
     </Reference>
     <Reference Include="ATIAN.Middleware.DFVSensor">
-      <HintPath>..\..\..\ATIAN-product-DTS-00002\src\ATIAN.Middleware.DFVSSensor\obj\Debug\netstandard2.0\ATIAN.Middleware.DFVSensor.dll</HintPath>
+      <HintPath>..\..\..\..\ATIAN-product-DTS-00002\src\ATIAN.Middleware.DFVSSensor\obj\Debug\netstandard2.0\ATIAN.Middleware.DFVSensor.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>

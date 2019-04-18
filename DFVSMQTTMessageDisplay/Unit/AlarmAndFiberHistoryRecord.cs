@@ -93,7 +93,7 @@ namespace DFVSMQTTMessageDisplay.Unit
                     throw;
                 }
                 alarmsList.Clear();
-                QueryChannelAlarmHistory();
+             
             }
         }
 
@@ -114,8 +114,8 @@ namespace DFVSMQTTMessageDisplay.Unit
                     List<DFVSChannelFiber> DFVSChannelAlarmlist = new List<DFVSChannelFiber>();
                     for (int i = 0; i < faultlList.Count; i++)
                     {
-                        if (faultlList[i].FiberStatus!=1|| faultlList[i].FiberStatus != 0)
-                        {
+                        //if (faultlList[i].FiberStatus!=1|| faultlList[i].FiberStatus != 0)
+                        //{
                             DFVSChannelAlarmlist.Add(new DFVSChannelFiber()
                             {
                                 FiberStatus = faultlList[i].FiberStatus,
@@ -124,7 +124,7 @@ namespace DFVSMQTTMessageDisplay.Unit
                                 SensorID = faultlList[i].SensorID,
                                 ChannelID = faultlList[i].ChannelID
                             });
-                        }
+                       // }
 
                        
                     }
@@ -144,7 +144,6 @@ namespace DFVSMQTTMessageDisplay.Unit
                     Console.WriteLine(e);
                     throw;
                 }
-                QueryChannelFiberHistory();
                 faultlList.Clear();
             }
 
@@ -154,14 +153,37 @@ namespace DFVSMQTTMessageDisplay.Unit
         /// <summary>
         /// 查询光纤状态信息
         /// </summary>
-        public void QueryChannelFiberHistory()
+        public void QueryChannelFiberHistory(int PageIndex, int PageSize)
         {
+            int count = 0;
             atenDBContainer ef = new atenDBContainer();
-            IList<DFVSChannelFiber> ChannelFiberList = ef.DFVSChannelFibers.Where(o => o.ID != 0).ToList();
+            Expression<Func<DFVSChannelFiber, bool>> wh = c => true;
 
+            if (!string.IsNullOrEmpty(dateTimePicker3.ToString()) && !string.IsNullOrEmpty(dateTimePicker4.ToString()))
+            {
+
+                DateTime start = dateTimePicker3.Value;
+                DateTime end = dateTimePicker4.Value.AddDays(1);
+                wh = wh.And(c => c.PushTime > start && c.PushTime < end);
+            }
+            var q = from m1 in ef.DFVSChannelFibers.Where(wh).OrderBy(o=>o.PushTime)  .Skip(PageSize * (PageIndex - 1)).Take(PageSize).ToList()
+                select new DFVSChannelFiber
+                {
+                    ID = m1.ID,
+                    FiberStatus = m1.FiberStatus,
+                    FiberBreakLength = m1.FiberBreakLength,
+                    SensorID = m1.SensorID,
+                    ChannelID = m1.ChannelID,
+                    PushTime = m1.PushTime,
+
+                };
+            count = ef.DFVSChannelFibers.Where(wh).Count();
+           
+            pagerControl1.DrawControl(count);
             dataGridView1.Invoke(new MethodInvoker(delegate
             {
-                dataGridView1.DataSource = ChannelFiberList.ToArray();
+              
+                dataGridView1.DataSource = q.ToArray();
                 dataGridView1.Refresh();
             }));
 
@@ -172,88 +194,27 @@ namespace DFVSMQTTMessageDisplay.Unit
         /// 查询警报信息
         /// </summary>
 
-        public void QueryChannelAlarmHistory()
+        public void QueryChannelAlarmHistory(int PageIndex, int PageSize)
         {
-            atenDBContainer ef = new atenDBContainer();
-            IList<DFVSChannelAlarm> ChannelAlarmList = ef.DFVSChannelAlarms.Where(o => o.ID != 0).ToList();
-            dataGridView2.Invoke(new MethodInvoker(delegate
-            {
-                dataGridView2.DataSource = ChannelAlarmList.ToArray();
-                dataGridView2.Refresh();
-            }));
-
-
-        }
-
-        /// <summary>
-        /// 窗体加载的时候查询数据
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void AlarmAndFiberHistoryRecord_Load(object sender, EventArgs e)
-        {
-            QueryChannelAlarmHistory();
-
-            QueryChannelFiberHistory();
-        }
-
-
-        /// <summary>
-        /// 断纤状态历史警报查询
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
-        {
-            atenDBContainer ef = new atenDBContainer();
-            Expression<Func<DFVSChannelFiber, bool>> wh = c => true;
-
-            if (!string.IsNullOrEmpty(dateTimePicker3.ToString()) && !string.IsNullOrEmpty(dateTimePicker4.ToString()))
-            {
-
-                wh = wh.And(c => c.PushTime > dateTimePicker3.Value && c.PushTime < dateTimePicker4.Value);
-            }
-            var q = from m1 in ef.DFVSChannelFibers.Where(wh).ToList()
-                    select new DFVSChannelFiber
-                    {
-                        ID = m1.ID,
-                        FiberStatus = m1.FiberStatus,
-                        FiberBreakLength = m1.FiberBreakLength,
-                        SensorID = m1.SensorID,
-                        ChannelID = m1.ChannelID,
-                        PushTime = m1.PushTime,
-
-                    };
-            dataGridView1.Invoke(new MethodInvoker(delegate
-            {
-                dataGridView1.DataSource = q.ToArray();
-                dataGridView1.Refresh();
-            }));
-        }
-
-
-        /// <summary>
-        /// 警报状态历史记录查询
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void button2_Click(object sender, EventArgs e)
-        {
+            int count = 0;
             atenDBContainer ef = new atenDBContainer();
             Expression<Func<DFVSChannelAlarm, bool>> wh = c => true;
 
             if (!string.IsNullOrEmpty(dateTimePicker1.ToString()) && !string.IsNullOrEmpty(dateTimePicker2.ToString()))
             {
-
-                wh = wh.And(c => c.PushTime > dateTimePicker1.Value && c.PushTime < dateTimePicker2.Value);
+                DateTime start = dateTimePicker1.Value;
+                DateTime end = dateTimePicker2.Value.AddDays(1);
+                wh = wh.And(c => c.PushTime > start && c.PushTime < end);
             }
+
             if (comboBox1.SelectedItem!=null)
             {
-                int AlarmLevel = Convert.ToInt32(comboBox1.SelectedItem);
 
-                wh = wh.And(c => c.AlarmLevel==AlarmLevel);
+                int alarmLevel = Convert.ToInt32(comboBox1.SelectedItem);
+                wh = wh.And(c => c.AlarmLevel == alarmLevel);
+
             }
-            var q = from m1 in ef.DFVSChannelAlarms.Where(wh).ToList()
+            var q = from m1 in ef.DFVSChannelAlarms.Where(wh).OrderBy(o => o.PushTime).Skip(PageSize * (PageIndex - 1)).Take(PageSize).ToList()
                     select new DFVSChannelAlarm
                     {
                         ID = m1.ID,
@@ -270,13 +231,68 @@ namespace DFVSMQTTMessageDisplay.Unit
                         SensorID = m1.SensorID,
                         ChannelID = m1.ChannelID,
 
-                    } ;
+                    };
+            count = ef.DFVSChannelAlarms.Where(wh).Count();
+           
+
+            pagerControl2.DrawControl(count);
             dataGridView2.Invoke(new MethodInvoker(delegate
             {
-
+               
                 dataGridView2.DataSource = q.ToArray();
                 dataGridView2.Refresh();
             }));
+
+
+        }
+
+        /// <summary>
+        /// 窗体加载的时候查询数据
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AlarmAndFiberHistoryRecord_Load(object sender, EventArgs e)
+        {
+            dateTimePicker3.Value = DateTime.Now.AddDays(-7);
+            dateTimePicker1.Value = DateTime.Now.AddDays(-7);
+
+            pagerControl1.OnPageChanged += new EventHandler(pagerControl1_OnPageChanged);
+
+            pagerControl2.OnPageChanged+=new EventHandler(pagerControl2_OnPageChanged);
+
+         
+
+        }
+
+        void pagerControl1_OnPageChanged(object sender, EventArgs e)
+        {
+            QueryChannelFiberHistory(pagerControl1.PageIndex, pagerControl1.PageSize);
+        }
+
+        void pagerControl2_OnPageChanged(object sender, EventArgs e)
+        {
+            QueryChannelAlarmHistory(pagerControl2.PageIndex, pagerControl2.PageSize);
+        }
+
+        /// <summary>
+        /// 断纤状态历史警报查询
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            QueryChannelFiberHistory(pagerControl1.PageIndex,pagerControl1.PageSize);
+        }
+
+
+        /// <summary>
+        /// 警报状态历史记录查询
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button2_Click(object sender, EventArgs e)
+        {
+            QueryChannelAlarmHistory(pagerControl2.PageIndex, pagerControl2.PageSize);
         }
     }
 }

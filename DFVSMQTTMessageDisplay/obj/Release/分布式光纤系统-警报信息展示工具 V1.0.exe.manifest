@@ -72,7 +72,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JTUHRh9rV+fv4OHLuqpMVQFpXB8zZIX1smwPEurxu9w=</dsig:DigestValue>
+        <dsig:DigestValue>iXSRDuuaUZyuh9U0VLULi4Lif/jHdAWkhtb8ea9DkEk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -109,6 +109,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>qvlXkYVbSKQv4TSxN3qijSy1/ur95N10ab7IDzOzevg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ATIAN.Middleware.DFTSensor.dll" size="7680">
+      <assemblyIdentity name="ATIAN.Middleware.DFTSensor" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>yQ02rETUZka71QWbj2gut+ETqwQyNR5w9NStISm168E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -257,14 +269,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="分布式光纤系统-警报信息展示工具 V1.0.exe" size="66016">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="分布式光纤系统-警报信息展示工具 V1.0.exe" size="69088">
       <assemblyIdentity name="分布式光纤系统-警报信息展示工具 V1.0" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GI/+k+no79gnRYEBBTZV7A7vp1XvZ0GdYGgwT3EIEhk=</dsig:DigestValue>
+        <dsig:DigestValue>LjOMaof2k58qRnorZReEF5woND7trzaiqvDXOCC7uWo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

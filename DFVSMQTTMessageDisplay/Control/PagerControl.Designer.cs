@@ -141,6 +141,7 @@
             this.btnGo.TabIndex = 64;
             this.btnGo.Text = "跳转";
             this.btnGo.UseVisualStyleBackColor = false;
+            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
             // 
             // txtPageSize
             // 
@@ -151,6 +152,7 @@
             this.txtPageSize.Size = new System.Drawing.Size(32, 21);
             this.txtPageSize.TabIndex = 62;
             this.txtPageSize.Text = "100";
+            this.txtPageSize.Leave += new System.EventHandler(this.txtPageSize_Leave);
             // 
             // txtPageNum
             // 
@@ -159,6 +161,8 @@
             this.txtPageNum.Name = "txtPageNum";
             this.txtPageNum.Size = new System.Drawing.Size(97, 21);
             this.txtPageNum.TabIndex = 63;
+            this.txtPageNum.TextChanged += new System.EventHandler(this.txtPageNum_TextChanged);
+            this.txtPageNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPageNum_KeyPress);
             // 
             // lnkLast
             // 
@@ -173,6 +177,7 @@
             this.lnkLast.TabIndex = 61;
             this.lnkLast.TabStop = true;
             this.lnkLast.Text = "尾页";
+            this.lnkLast.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkLast_LinkClicked);
             // 
             // lnkNext
             // 
@@ -187,6 +192,7 @@
             this.lnkNext.TabIndex = 60;
             this.lnkNext.TabStop = true;
             this.lnkNext.Text = "下一页";
+            this.lnkNext.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkNext_LinkClicked);
             // 
             // lnkPrev
             // 
@@ -201,6 +207,7 @@
             this.lnkPrev.TabIndex = 59;
             this.lnkPrev.TabStop = true;
             this.lnkPrev.Text = "上一页";
+            this.lnkPrev.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkPrev_LinkClicked);
             // 
             // lnkFirst
             // 
@@ -215,6 +222,7 @@
             this.lnkFirst.TabIndex = 58;
             this.lnkFirst.TabStop = true;
             this.lnkFirst.Text = "首页";
+            this.lnkFirst.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkFirst_LinkClicked);
             // 
             // tableLayoutPanel1
             // 

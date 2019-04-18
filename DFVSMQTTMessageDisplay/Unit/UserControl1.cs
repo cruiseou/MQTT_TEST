@@ -45,7 +45,10 @@ namespace DFVSMQTTMessageDisplay.Unit
 
         public   void AddFiberRecord(List<ATIAN.Common.MQTTLib.Protocol.ChannelFiberModel> faultlList)
         {
+            faultlList = faultlList.Where(o => o.FiberStatus != 7).ToList();
             alarmAndFiberRealTimeRecord1.AddFiberData(faultlList);
+
+           
             alarmHistory1.AddFiberData(faultlList);
         }
 
