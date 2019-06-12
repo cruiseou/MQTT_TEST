@@ -116,7 +116,6 @@ F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTM
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.Protocol.DFTS.dll
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.Protocol.DFVS.dll
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.Protocol.dll
-F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Middleware.DFSensor.dll
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Middleware.DFTSensor.dll
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Middleware.DFVSensor.dll
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\EntityFramework.dll
@@ -125,24 +124,13 @@ F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTM
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\MQTTnet.dll
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\MQTTnet.Extensions.ManagedClient.dll
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\Newtonsoft.Json.dll
-F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\NPOI.dll
-F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\NPOI.OOXML.dll
-F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\NPOI.OpenXml4Net.dll
-F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\NPOI.OpenXmlFormats.dll
-F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.ManagedInvoke.pdb
-F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.pdb
-F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.Protocol.pdb
-F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.Protocol.DFTS.pdb
-F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Common.MQTTLib.Protocol.DFVS.pdb
-F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Middleware.DFSensor.pdb
-F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Middleware.DFTSensor.pdb
-F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Middleware.DFVSensor.pdb
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\EntityFramework.xml
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\EntityFramework.SqlServer.xml
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ICSharpCode.SharpZipLib.xml
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\Newtonsoft.Json.pdb
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\Newtonsoft.Json.xml
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\zh-Hans\EntityFramework.resources.dll
+F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.csprojAssemblyReference.cache
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.Control.PagerControl.resources
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.MQTTMessageDisplay.resources
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.Properties.Resources.resources
@@ -157,3 +145,6 @@ F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTM
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\DFVSMQTTMessageDisplay.csproj.CopyComplete
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\分布式光纤系统-警报信息展示工具 V1.0.exe
 F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\obj\Release\分布式光纤系统-警报信息展示工具 V1.0.pdb
+F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Middleware.SmokeSensor.dll
+F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\ATIAN.Middleware.ys7.dll
+F:\Code\ATIAN-Project-DFVS-00001\台湾落石项目小工具\MQTT_TEST\DFVSMQTTMessageDisplay\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll

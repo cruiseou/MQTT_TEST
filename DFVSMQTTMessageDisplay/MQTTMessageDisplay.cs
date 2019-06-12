@@ -1,18 +1,6 @@
-﻿using DFVSMQTTMessageDisplay.Model;
-using DFVSMQTTMessageDisplay.MQTT;
-using MQTTnet;
-using MQTTnet.Extensions.ManagedClient;
-using MQTTnet.Protocol;
-using Newtonsoft.Json;
-using NPOI.HSSF.UserModel;
-using NPOI.HSSF.Util;
-using NPOI.SS.UserModel;
+﻿using DFVSMQTTMessageDisplay.MQTT;
 using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace DFVSMQTTMessageDisplay
